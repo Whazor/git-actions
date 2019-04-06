@@ -13,4 +13,6 @@ RUN apk add --no-cache git bash git-subtree openssh-client
 ADD entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
+WORKDIR /github/workspace
+
 ENTRYPOINT ["/entrypoint.sh"]
