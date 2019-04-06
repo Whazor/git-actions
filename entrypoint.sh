@@ -4,6 +4,7 @@ set -e
 echo "#################################################"
 echo "Starting the git Action"
 
+mkdir ~/.ssh
 echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_rsa
 eval $(ssh-agent -s)
